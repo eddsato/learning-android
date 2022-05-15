@@ -51,11 +51,11 @@ abstract class WordRoomDatabase : RoomDatabase() {
         suspend fun populateDatabase(wordDao: WordDao) {
             wordDao.deleteAll()
 
-            var word = Word(0,"Hello")
+            var word = Word("Hello")
             wordDao.insert(word)
-            word = Word(1, "World!")
+            word = Word("World!")
             wordDao.insert(word)
-            word = Word(2, "massayuk1")
+            word = Word("massayuk1")
             wordDao.insert(word)
         }
     }
